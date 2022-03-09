@@ -1,15 +1,14 @@
-import React from 'react';
 import './App.css';
-import Counter from './components/Counter';
+import Form from './components/Form';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <p>
-          Cognizant Counter Application...
+          Sample react App
         </p>
-        <Counter />
+        <Form />
       </header>
     </div>
   );
