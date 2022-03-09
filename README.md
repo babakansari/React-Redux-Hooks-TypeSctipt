@@ -1,7 +1,8 @@
-# UI
-
-User interface for front end 
+## Sample React App developed by TypeScript using GraphQL for BFF
 
 Techstack: 
-- React -  UI Framework
-- Axios - Integration
+- Programming Language - TypeScript
+- UI - React
+  - Integration - Axios
+- BFF (Backend for Frontend) - Node.js 
+  - GraphQL Client service
