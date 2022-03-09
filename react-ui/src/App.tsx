@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Sample react App
+          Sample react Application
         </p>
         <Form />
       </header>
