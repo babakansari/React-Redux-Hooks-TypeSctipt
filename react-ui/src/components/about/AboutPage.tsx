@@ -1,11 +1,12 @@
 import React from "react";
+import Typography from '@material-ui/core/Typography';
 
 const AboutPage = () => (
   <div>
-    <h2>About</h2>
-    <p>
+    <Typography variant="h2">About</Typography>
+    <Typography variant="caption">
       This app uses React, Redux, React Router, and many other helpful libraries.
-    </p>
+    </Typography>
   </div>
 );
 

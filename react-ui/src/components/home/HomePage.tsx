@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Typography from '@material-ui/core/Typography';
 
 const HomePage = () => (
   <div className="jumbotron">
-    <h1>Net Jets Project Home Page</h1>
-    <p>React, Redux and Axios using Type Script</p>
+    <Typography variant="h2">Net Jets Project Home Page</Typography>
+    <Typography variant="caption">React, Redux and Axios using Type Script</Typography>
     <Link to="about" className="btn btn-primary btn-lg">
       Learn more
     </Link>

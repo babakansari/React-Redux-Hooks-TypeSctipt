@@ -1,8 +1,9 @@
 import React from "react";
+import Typography from '@material-ui/core/Typography';
 
 class RostersPage extends React.Component {
   render() {
-    return <h2>Rosters</h2>;
+    return  <Typography variant="h2">Rosters</Typography>;
   }
 }
 

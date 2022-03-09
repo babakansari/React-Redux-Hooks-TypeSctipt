@@ -1,21 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 const Header = () => {
-  const activeStyle = { color: "#F15B2A" };
   return (
     <nav>
-      <Link to="/" style={activeStyle}>
-        Home
-      </Link>
-      {" | "}
-      <Link to="rostering" style={activeStyle}>
-        Rosters
-      </Link>
-      {" | "}
-      <Link to="about" style={activeStyle}>
-        About
-      </Link>
+      <ButtonGroup color="inherit" >
+        <Button 
+          component={RouterLink} 
+          to="/">
+            Home
+        </Button>
+        {" | "}
+        <Button 
+          component={RouterLink} 
+          to="rostering">
+            Rosters
+        </Button>
+        {" | "}
+        <Button 
+          component={RouterLink} 
+          to="about">
+            About
+        </Button>
+      </ButtonGroup>
     </nav>
   );
 };
