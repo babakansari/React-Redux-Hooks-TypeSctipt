@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 
 function CrewPage() {
 
-  const [input, setInput] = useState('-');
+  const [input, setInput] = useState('<Crew>');
 
   const dispatch = useDispatch();
 

@@ -6,17 +6,20 @@ const initialState: ApplicationState = {
 };
 
 const crewReducer = (state: ApplicationState = initialState, action: types.CrewAction) => {
+  const index = state.crewes.indexOf(action.crew);
   switch (action.type) {
     case types.ADD_CREW:
-      const newCrews = [ ...state.crewes];
-      newCrews.push(action.crew)
-      const newState: ApplicationState = { 
-        crewes: newCrews
-      };
-      return newState;
+      if (index === -1) {
+        const newCrews = [ ...state.crewes];
+        newCrews.push(action.crew)
+        const newState: ApplicationState = { 
+          crewes: newCrews
+        };
+        return newState;
+      }
+      return state;
     
     case types.DEL_CREW:
-      var index = state.crewes.indexOf(action.crew);
       if (index !== -1) {
         const newCrews = [ ...state.crewes];
         newCrews.splice(index, 1);

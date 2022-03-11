@@ -21,15 +21,16 @@ const Header = () => {
         {" | "}
         <Button 
           component={RouterLink} 
-          to="about">
-            About
+          to="Crew">
+            Crew
         </Button>
         {" | "}
         <Button 
           component={RouterLink} 
-          to="Crew">
-            Crew
+          to="about">
+            About
         </Button>
+
       </ButtonGroup>
     </nav>
   );
