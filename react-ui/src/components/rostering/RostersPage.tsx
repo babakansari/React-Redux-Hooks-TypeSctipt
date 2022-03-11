@@ -3,7 +3,11 @@ import Typography from '@material-ui/core/Typography';
 
 class RostersPage extends React.Component {
   render() {
-    return  <Typography variant="h2">Rosters</Typography>;
+    return  (
+      <div>
+        <Typography variant="h2">Rosters</Typography>
+      </div>
+    );
   }
 }
 

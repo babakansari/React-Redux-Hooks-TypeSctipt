@@ -24,6 +24,12 @@ const Header = () => {
           to="about">
             About
         </Button>
+        {" | "}
+        <Button 
+          component={RouterLink} 
+          to="Crew">
+            Crew
+        </Button>
       </ButtonGroup>
     </nav>
   );
