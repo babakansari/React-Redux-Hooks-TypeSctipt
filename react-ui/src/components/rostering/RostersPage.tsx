@@ -12,20 +12,25 @@ function RostersPage () {
     <div>
       <Typography variant="h2">Rosters</Typography>
       <br/>
-      <tbody>
-        {state.crewes.map(crew => {
-          return (
-            <tr key={crew}>
-              <td>
-                &gt;
-              </td>
-              <td>
-                <Link href={"/Crew/" + crew} >{crew}</Link>
-              </td>
-            </tr>
-          );
-        })}
-      </tbody>
+      {state.crewes.length===0 ? 
+        <Typography variant="caption">List is empty</Typography> : 
+        <table>
+          <tbody>
+            {state.crewes.map(crew => {
+              return (
+                <tr key={crew}>
+                  <td>
+                    &gt;
+                  </td>
+                  <td>
+                    <Link href={"/Crew/" + crew} >{crew}</Link>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      }
     </div>
   );
 }
