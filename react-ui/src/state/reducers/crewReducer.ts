@@ -6,10 +6,10 @@ const initialState: ApplicationState = {
 };
 
 const crewReducer = (state: ApplicationState = initialState, action: types.CrewAction) => {
-  const index = state.crewes.indexOf(action.crew);
+  const crew = state.crewes.find( crew => crew.Name === action.crew.Name);
   switch (action.type) {
     case types.ADD_CREW:
-      if (index === -1) {
+      if (crew === undefined) {
         const newCrews = [ ...state.crewes];
         newCrews.push(action.crew)
         const newState: ApplicationState = { 
@@ -20,13 +20,19 @@ const crewReducer = (state: ApplicationState = initialState, action: types.CrewA
       return state;
     
     case types.DEL_CREW:
-      if (index !== -1) {
+      
+      if (crew !== undefined) {
+        
         const newCrews = [ ...state.crewes];
-        newCrews.splice(index, 1);
-        const newState: ApplicationState = { 
-          crewes: newCrews
-        };
-        return newState;
+        const removeIndex = newCrews.findIndex( crew => crew.Name === action.crew.Name);
+        // console.log(JSON.stringify(newCrews));
+        if(removeIndex !== -1){
+          newCrews.splice( removeIndex, 1 );
+          const newState: ApplicationState = { 
+            crewes: newCrews
+          };
+          return newState;
+        }
       }
       return state;
 

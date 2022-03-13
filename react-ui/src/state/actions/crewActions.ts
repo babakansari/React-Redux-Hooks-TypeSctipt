@@ -1,11 +1,10 @@
 import * as types from './actionTypes';
 import { Dispatch } from 'redux';
+import axios from 'axios';
+import { Crew } from '../ApplicationState';
 
-// export function createCrew(crew: string) {
-//   return { type: types.ADD_CREW, crew };
-// }
 
-export const createCrew = (crew: string) => {
+export const createCrew = (crew: Crew) => {
   return (dispatch: Dispatch<types.CrewAction>) => {
     dispatch({
       type: types.ADD_CREW,
@@ -14,11 +13,26 @@ export const createCrew = (crew: string) => {
   }
 }
 
-export const deleteCrew = (crew: string) => {
+export const deleteCrew = (crew: Crew) => {
   return (dispatch: Dispatch<types.CrewAction>) => {
     dispatch({
       type: types.DEL_CREW,
       crew: crew
     });
+  }
+}
+
+export const loadCrewes = () => {
+
+  return async (dispatch: Dispatch<types.CrewesAction>) => {
+
+    // const request = await axios
+    //                         .get("")
+    //                         .catch( (err) => console.error(err) );
+
+    // dispatch({
+    //   type: types.LOAD_CREW,
+    //   crewes: crewes
+    // });
   }
 }
