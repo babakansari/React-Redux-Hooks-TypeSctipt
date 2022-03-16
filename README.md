@@ -1,8 +1,6 @@
-## Sample React App developed by TypeScript using GraphQL for BFF
+## Sample React Hook App developed by TypeScript using Redux for Application State 
 
-Techstack: 
+Tech Stack: 
 - Programming Language - TypeScript
 - UI - React
-  - Integration - Axios
-- BFF (Backend for Frontend) - Node.js 
-  - GraphQL Client service
+  - Redux using React Hooks
